@@ -7,10 +7,8 @@ else:
     n = number % 10
 
 if n > 5:
-    phrase = "and is greater than 5"
+    print("Last digit of {} is {} and is greater than 5".format(number, n))
 elif n == 0:
-    phrase = "and is 0"
+    print("Last digit of {} is {} and is 0".format(number, n))
 elif n < 6 and number != 0:
-    phrase = "and is less than 6 and not 0"
-
-print("Last digit of {} is {} {}".format(number, n, phrase))
+    print("Last digit of {} is {} and is less than 6 and not 0".format(number, n))
