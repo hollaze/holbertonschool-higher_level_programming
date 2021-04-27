@@ -4,4 +4,4 @@ for i in range(122, 96, -1):
         c = chr(i)
     else:
         c = chr(i - 32)
-    print("{:s}".format(c), end='')	
+    print("{:s}".format(c), end='')
