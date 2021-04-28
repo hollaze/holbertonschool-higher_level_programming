@@ -7,4 +7,4 @@ def print_last_digit(number):
 
     print(n, end='')
     print()
-    return n
+    return 
