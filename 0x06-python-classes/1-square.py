@@ -9,5 +9,5 @@ class Square:
         Instance:
             size: size of the square
     """
-    def __init__(self, __size=None):
+    def __init__(self, size):
         self.__size = 0
