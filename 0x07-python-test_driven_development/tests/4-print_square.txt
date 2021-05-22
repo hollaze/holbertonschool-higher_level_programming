@@ -1,0 +1,55 @@
+                        ##############################
+                        # TEST 4-print_square MODULE #
+                        ##############################
+
+if there is enough lines in module
+>>> moduleLines = __import__('4-print_square').__doc__
+>>> len(moduleLines) > 5
+True
+
+                    ***************************************
+
+if there is enough lines in function
+>>> funtctionLines = __import__('4-print_square').print_square.__doc__
+>>> len(funtctionLines) > 5
+True
+
+                    ***************************************
+
+Import module
+>>> print_square = __import__('4-print_square').print_square
+
+                    ***************************************
+
+Prints square
+>>> print_square(4)
+####
+####
+####
+####
+
+                    ***************************************
+
+Prints negative square
+>>> print_square(-1)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+                    ***************************************
+
+Prints with no argument
+>>> print_square()
+Traceback (most recent call last):
+...
+TypeError: print_square() missing 1 required positional argument: 'size'
+
+                    ***************************************
+
+Prints string
+>>> print_square("str")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+                    ***************************************
