@@ -7,6 +7,20 @@ Import module
 
                     ***************************************
 
+if there is enough lines in module
+>>> moduleLine = __import__('0-add_integer').__doc__
+>>> len(moduleLine) > 5
+True
+
+                    ***************************************
+
+if there is enough line in function
+>>> functionLines = __import__('0-add_integer').add_integer.__doc__
+>>> len(functionLines) > 5
+True
+
+                    ***************************************
+
 add two posivites integers in stdout
 >>> print(add_integer(1, 2))
 3
