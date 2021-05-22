@@ -19,6 +19,12 @@ add positive and negative integers in stdout
 
                     ***************************************
 
+add negative and positive integers in stdout
+>>> print(add_integer(-10, 100))
+90
+
+                    ***************************************
+
 add integer a to already set integer b in stdout
 >>> print(add_integer(2))
 100
@@ -28,6 +34,14 @@ add integer a to already set integer b in stdout
 add float and negative integer in stdout
 >>> print(add_integer(100.3, -2))
 98
+
+                    ***************************************
+
+add integer and None in stdout
+>>> print(add_integer(98, None))
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
 
                     ***************************************
 
