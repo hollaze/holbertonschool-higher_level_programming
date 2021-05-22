@@ -1,0 +1,48 @@
+                        #############################
+                        # TEST 0-add_integer MODULE #
+                        #############################
+
+Import module
+>>> add_integer = __import__('0-add_integer').add_integer
+
+                    ***************************************
+
+add two posivites integers in stdout
+>>> print(add_integer(1, 2))
+3
+
+                    ***************************************
+
+add positive and negative integers in stdout
+>>> print(add_integer(100, -2))
+98
+
+                    ***************************************
+
+add integer a to already set integer b in stdout
+>>> print(add_integer(2))
+100
+
+                    ***************************************
+
+add float and negative integer in stdout
+>>> print(add_integer(100.3, -2))
+98
+
+                    ***************************************
+
+add integer and string in stdout
+>>> print(add_integer(4, "School"))
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+                    ***************************************
+
+add None and already set integer in stdout
+>>> print(add_integer(None))
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+                    ***************************************
