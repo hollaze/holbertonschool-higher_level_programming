@@ -59,12 +59,12 @@ class Rectangle:
         self.__width = w_value
 
     def area(self):
-        return self.__width * self.__height
+        return self.width * self.height
 
     def perimeter(self):
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             return 0
-        return (self.__width * 2) + (self.__height * 2)
+        return (self.width * 2) + (self.height * 2)
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
@@ -79,21 +79,24 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
+        '''
+        square class method
+        '''
         return cls(size, size)
 
     def __str__(self):
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             return ""
         s = ""
-        for i in range(self.__height):
-            for j in range(self.__width):
+        for i in range(self.height):
+            for j in range(self.width):
                 s += str(self.print_symbol)
-            if i < self.__height - 1:
+            if i < self.height - 1:
                 s += "\n"
         return s
 
     def __repr__(self):
-        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
+        return "Rectangle({:d}, {:d})".format(self.width, self.height)
 
     def __del__(self):
         Rectangle.number_of_instances -= 1
