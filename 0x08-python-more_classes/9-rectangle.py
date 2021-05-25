@@ -58,12 +58,12 @@ class Rectangle:
         self.__width = w_value
 
     def area(self):
-        return self.__width * self.__height
+        return self.width * self.height
 
     def perimeter(self):
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             return 0
-        return (self.__width * 2) + (self.__height * 2)
+        return (self.width * 2) + (self.height * 2)
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
