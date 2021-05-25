@@ -57,8 +57,26 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = w_value
 
-    def area(self):
-        return self.width * self.height
+    def __str__(self):
+        if self.width == 0 or self.height == 0:
+            return ""
+        s = ""
+        for i in range(self.height):
+            for j in range(self.width):
+                s += str(self.print_symbol)
+            if i < self.height - 1:
+                s += "\n"
+        return s
+
+    def __repr__(self):
+        return "Rectangle({:d}, {:d})".format(self.width, self.height)
+
+    def __del__(self):
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
+
+        def area(self):
+            return self.width * self.height
 
     def perimeter(self):
         if self.width == 0 or self.height == 0:
@@ -79,21 +97,3 @@ class Rectangle:
     @classmethod
     def square(cls, size=0):
         return Rectangle(size, size)
-
-    def __str__(self):
-        if self.width == 0 or self.height == 0:
-            return ""
-        s = ""
-        for i in range(self.height):
-            for j in range(self.width):
-                s += str(self.print_symbol)
-            if i < self.height - 1:
-                s += "\n"
-        return s
-
-    def __repr__(self):
-        return "Rectangle({:d}, {:d})".format(self.width, self.height)
-
-    def __del__(self):
-        Rectangle.number_of_instances -= 1
-        print("Bye rectangle...")
