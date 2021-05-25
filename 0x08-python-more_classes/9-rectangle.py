@@ -79,9 +79,6 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        '''
-        square class method
-        '''
         return cls(size, size)
 
     def __str__(self):
