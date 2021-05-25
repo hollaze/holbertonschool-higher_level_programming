@@ -3,10 +3,10 @@
 
 
 class Rectangle:
-    ''' 
+    '''
     Class:
         defines a rectangle
-        
+
         Returns:
                 width   (int)
                 height  (int)

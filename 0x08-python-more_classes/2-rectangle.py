@@ -2,17 +2,18 @@
 
 
 class Rectangle:
-    ''' 
+    '''
     Class:
         defines a rectangle,
         calulate Area and perimeter
-        
+
         Returns:
                 width       (int)
                 height      (int)
                 area        (def)
                 perimeter   (def)
     '''
+
     def __init__(self, width=0, height=0):
         self.__height = height
         self.__width = width
@@ -40,12 +41,11 @@ class Rectangle:
         if self.__width < 0:
             raise ValueError("width must be >= 0")
         self.__width = w_value
-    
+
     def area(self):
         return self.__width * self.__height
-    
+
     def perimeter(self):
         if self.__width == 0 or self.__height == 0:
             return 0
         return (self.__width * 2) + (self.__height * 2)
-    

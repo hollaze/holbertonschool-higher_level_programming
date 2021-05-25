@@ -3,7 +3,7 @@
 
 
 class Rectangle:
-    ''' 
+    '''
     Class:
         empty class that defines a rectangle
     '''
