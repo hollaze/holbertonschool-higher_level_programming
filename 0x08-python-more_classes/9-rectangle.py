@@ -79,7 +79,10 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        return cls(size, size)
+        if size >= 0:
+            return cls(size, size)
+        else:
+            return cls(0, 0)
 
     def __str__(self):
         s = ""
@@ -94,6 +97,5 @@ class Rectangle:
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
-        print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
-        
+        print("Bye rectangle...")
