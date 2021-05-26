@@ -16,20 +16,8 @@ class Rectangle:
     '''
 
     def __init__(self, width=0, height=0):
-        self.__height = height
         self.__width = width
-
-    @property
-    def height(self):
-        return self.__height
-
-    @height.setter
-    def height(self, h_value):
-        if type(self.__height) is not int:
-            raise TypeError("height must be an integer")
-        if self.height < 0:
-            raise ValueError("height must be >= 0")
-        self.__height = h_value
+        self.__height = height
 
     @property
     def width(self):
@@ -42,6 +30,19 @@ class Rectangle:
         if self.__width < 0:
             raise ValueError("width must be >= 0")
         self.__width = w_value
+
+
+    @property
+    def height(self):
+        return self.__height
+
+    @height.setter
+    def height(self, h_value):
+        if type(self.__height) is not int:
+            raise TypeError("height must be an integer")
+        if self.height < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = h_value
 
     def area(self):
         return self.__width * self.__height
