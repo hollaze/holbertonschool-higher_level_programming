@@ -2,20 +2,6 @@
                         # TEST 5-text_indentation MODULE #
                         ##################################
 
-if there is enough lines in module
->>> moduleLines = __import__('5-text_indentation').__doc__
->>> len(moduleLines) > 5
-True
-
-                    ********************************************
-
-if there is enough lines in function
->>> funtctionLines = __import__('5-text_indentation').text_indentation.__doc__
->>> len(funtctionLines) > 5
-True
-
-                    ********************************************
-
 Import module
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
