@@ -13,6 +13,7 @@ def text_indentation(text):
                 void
     '''
     i = 0
+    text = text.strip(' ')
 
     if not isinstance(text, str):
         raise TypeError("text must be a string")
@@ -21,7 +22,8 @@ def text_indentation(text):
         print(text[i], end='')
         if text[i] in ['.', ':', '?']:
             print('\n')
-            if text[i + 1] is ' ':
-                i += 1
+            if (i + 1) < len(text):
+                if text[i + 1] is ' ':
+                    i += 1
         i += 1
     print('\n')
