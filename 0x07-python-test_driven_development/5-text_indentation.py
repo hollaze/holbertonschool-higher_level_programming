@@ -16,15 +16,16 @@ def text_indentation(text):
     i = 0
     text = text.strip(' ')
 
-    if not isinstance(text, str):
+    if type(text) is not str:
         raise TypeError("text must be a string")
 
     while i < len(text):
         print(text[i], end='')
+
         if text[i] in ['.', ':', '?']:
-            print('\n')
             if (i + 1) < len(text):
-                if text[i + 1] is ' ':
+                if text[i + 1] == ' ':
                     i += 1
+            print("\n")
+
         i += 1
-    print('\n')
