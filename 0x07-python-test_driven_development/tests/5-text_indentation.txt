@@ -58,7 +58,6 @@ Sin aliud quid voles, postea.
 Quae animi affectio suum cuique tribuens atque hanc, quam dico.
 <BLANKLINE>
 Utinam quidem dicerent alium alio beatiorem! Iam ruinas videres
-<BLANKLINE>
 
                     ********************************************
 
@@ -80,8 +79,6 @@ Hello how are you ?
 <BLANKLINE>
 ?
 <BLANKLINE>
-<BLANKLINE>
-<BLANKLINE>
 
                     ********************************************
 
@@ -94,15 +91,12 @@ multiples punctuations at beginning of string
 .
 <BLANKLINE>
 Hello my friend
-<BLANKLINE>
 
                     ********************************************
 
 spaces at beginning of string
 >>> text_indentation("      Oh dear why so much spaces between us ?")
 Oh dear why so much spaces between us ?
-<BLANKLINE>
-<BLANKLINE>
 <BLANKLINE>
 
                     ********************************************
@@ -111,16 +105,12 @@ spaces at end of string
 >>> text_indentation("Oh dear why so much spaces between us ?       ")
 Oh dear why so much spaces between us ?
 <BLANKLINE>
-<BLANKLINE>
-<BLANKLINE>
 
                     ********************************************
 
 spaces in middle of string
 >>> text_indentation("Oh dear       why so much spaces between us ?")
 Oh dear       why so much spaces between us ?
-<BLANKLINE>
-<BLANKLINE>
 <BLANKLINE>
 
                     ********************************************
