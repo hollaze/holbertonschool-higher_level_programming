@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' '''
+''' MyList class '''
 
 
 class MyList(list):
@@ -13,4 +13,4 @@ class MyList(list):
     """
 
     def print_sorted(self):
-        print(set(self))
+        print(sorted(self))
