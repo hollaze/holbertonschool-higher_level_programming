@@ -1,0 +1,53 @@
+                        ###############################
+                        # TEST 7-base_geometry MODULE #
+                        ###############################
+
+Import module
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+                    *******************************************
+
+if there is enough lines in module
+>>> moduleLine = __import__('7-base_geometry').__doc__
+>>> len(moduleLine) > 5
+True
+
+                    *******************************************
+
+if there is enough line in function
+>>> functionLines = __import__('7-base_geometry').BaseGeometry.__doc__
+>>> len(functionLines) > 5
+True
+
+                    *******************************************
+
+Verifying type
+>>> bg = BaseGeometry()
+>>> type(bg)
+<class '7-base_geometry.BaseGeometry'>
+
+                    *******************************************
+
+type test
+>>> bg.integer_validator("my_int", "supposed int")
+Traceback (most recent call last):
+...
+TypeError: my_int must be an integer
+
+                    *******************************************
+
+TypeError
+>>> bg.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+                    *******************************************
+
+Value Error
+>>> bg.integer_validator("my_int", -1000)
+Traceback (most recent call last):
+...
+ValueError: my_int must be greater than 0
+
+                    *******************************************
