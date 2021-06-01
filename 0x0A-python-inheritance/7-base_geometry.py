@@ -2,7 +2,7 @@
 ''' BaseGeometry class '''
 
 
-class BaseGeometry:
+class BaseGeometry():
     '''
     raise exception if area is not implemented
     validates value
