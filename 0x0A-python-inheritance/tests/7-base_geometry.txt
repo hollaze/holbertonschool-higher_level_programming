@@ -99,3 +99,28 @@ Traceback (most recent call last):
 Exception: area() is not implemented
 
                     *******************************************
+
+>>> bg.integer_validator("my_int", (4,))
+Traceback (most recent call last):
+...
+TypeError: my_int must be an integer
+
+                    *******************************************
+
+>>> bg.integer_validator("my_int", [3])
+Traceback (most recent call last):
+...
+TypeError: my_int must be an integer
+
+                    *******************************************
+
+>>> bg.integer_validator("my_int", {3, 4})
+Traceback (most recent call last):
+...
+TypeError: my_int must be an integer
+
+                    *******************************************
+
+>>> bg.integer_validator("my_int", 1)
+
+                    *******************************************
