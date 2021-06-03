@@ -46,7 +46,7 @@ class Square:
         i = 0
         while i in range(value):
             i += 1
-        if type(value) is not int and value < 0 and i != 1:
+        if type(value) is not int or value < 0 or i != 1:
             raise TypeError("position must be a tuple of 2 positive integers")
 
         self.__position = value
