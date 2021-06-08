@@ -59,7 +59,7 @@ class Rectangle(Base):
         print("\n" * self.__y, end='')
         for row in range(self.__height):
             if self.__x:
-                print(" " * (self.__x - 1), end='')
+                print(" " * (self.__x), end='')
             if self.__width:
                 print("#" * self.__width)
 
