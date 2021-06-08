@@ -58,7 +58,10 @@ class Rectangle(Base):
         """
         print("\n" * self.__y, end='')
         for row in range(self.__height):
-            print(" " * (self.__x - 1), "#" * self.__width)
+            if self.__x:
+                print(" " * (self.__x - 1), end='')
+            if self.__width:
+                print("#" * self.__width)
 
     def update(self, *args, **kwargs):
         """
