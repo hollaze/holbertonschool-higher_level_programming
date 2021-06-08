@@ -100,18 +100,6 @@ class Rectangle(Base):
                                                     self.width, self.height)
         return s
 
-    """ height getter - setter """
-    @property
-    def height(self):
-        return self.__height
-
-    @height.setter
-    def height(self, value):
-        self.validate_int("height", value)
-        if value <= 0:
-            raise ValueError("height must be > 0")
-        self.__height = value
-
     """ width getter - setter """
     @property
     def width(self):
@@ -123,6 +111,18 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
+
+    """ height getter - setter """
+    @property
+    def height(self):
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        self.validate_int("height", value)
+        if value <= 0:
+            raise ValueError("height must be > 0")
+        self.__height = value
 
     """ x getter - setter """
     @property
