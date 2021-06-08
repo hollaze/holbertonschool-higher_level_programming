@@ -45,6 +45,14 @@ class Rectangle(Base):
                 print(" " * self.__x, "#" * self.__width)
 
     def update(self, *args, **kwargs):
+        """
+        update arguments
+
+        Parameters:
+            self    (obj)
+            args    (Any)
+            kwargs  (dict)
+        """
         if args and args is not None:
             try:
                 self.id = args[0]
