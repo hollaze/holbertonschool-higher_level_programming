@@ -25,7 +25,8 @@ class Square(Rectangle):
         Returns:
             [str]: informations
         """
-        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
+        return "[Square] ({}) {}/{} - {}".format(self.id,
+                                                 self.x, self.y, self.width)
 
     def validate_int(self, name, number):
         """
