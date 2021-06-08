@@ -1,0 +1,113 @@
+#!/usr/bin/python3
+''' Rectangle class '''
+from models.base import Base
+
+
+class Rectangle(Base):
+    """
+    Set a Rectangle
+
+    Args:
+        Base (inherited class): Base for all clases
+
+    Methods:
+        validate_int:
+            test if number is int
+        area:
+            gives area of a rectangle
+        display:
+            print a rectangle with # (width & height)
+            and with spaces " " (x & y)
+        update:
+            set arguments and key arguments
+        __str__:
+            gives information about the Rectangle
+    """
+
+    def __init__(self, width, height, x=0, y=0, id=None):
+        super().__init__(id)
+        self.height = height
+        self.width = width
+        self.x = x
+        self.y = y
+
+    def validate_int(self, name: str, number):
+        if type(number) is not int:
+            raise TypeError(f"{name} must be an integer")
+
+    def area(self):
+        return self.__height * self.__width
+
+    def display(self):
+        print("\n" * self.__y, end='')
+        for column in range(self.__height):
+            for row in range(self.__width - 1):
+                print(" " * self.__x, "#" * self.__width)
+
+    def update(self, *args, **kwargs):
+        if args and args is not None:
+            try:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
+            except IndexError:
+                pass
+        else:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
+
+    def __str__(self):
+        s = "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                                                    self.x, self.y,
+                                                    self.width, self.height)
+        return s
+
+    """ height getter - setter """
+    @property
+    def height(self):
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        self.validate_int("height", value)
+        if value <= 0:
+            raise ValueError("height must be > 0")
+        self.__height = value
+
+    """ width getter - setter """
+    @property
+    def width(self):
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        self.validate_int("width", value)
+        if value <= 0:
+            raise ValueError("width must be > 0")
+        self.__width = value
+
+    """ x getter - setter """
+    @property
+    def x(self):
+        return self.__x
+
+    @x.setter
+    def x(self, value):
+        self.validate_int("x", value)
+        if value < 0:
+            raise ValueError("x must be >= 0")
+        self.__x = value
+
+    """ y getter - setter """
+    @property
+    def y(self):
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        self.validate_int("y", value)
+        if value < 0:
+            raise ValueError("y must be >= 0")
+        self.__y = value
