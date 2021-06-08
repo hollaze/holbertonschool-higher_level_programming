@@ -31,7 +31,7 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
-    def validate_int(self, name: str, number):
+    def validate_int(self, name, number):
         if type(number) is not int:
             raise TypeError("{} must be an integer".format(name))
 
