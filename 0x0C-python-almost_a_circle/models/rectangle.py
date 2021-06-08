@@ -11,17 +11,11 @@ class Rectangle(Base):
         Base (inherited class): Base for all clases
 
     Methods:
-        validate_int:
-            test if number is int
-        area:
-            gives area of a rectangle
-        display:
-            print a rectangle with # (width & height)
-            and with spaces " " (x & y)
-        update:
-            set arguments and key arguments
-        __str__:
-            gives information about the Rectangle
+        validate_int
+        area
+        display
+        update
+        __str__
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
@@ -32,13 +26,36 @@ class Rectangle(Base):
         self.y = y
 
     def validate_int(self, name, number):
+        """
+        check if a number is an int
+
+        Parameters:
+            self    (Rectangle)
+            name    (str)
+            number  (int)
+        """
         if type(number) is not int:
             raise TypeError("{} must be an integer".format(name))
 
     def area(self):
+        """
+        gives area of a retangle
+
+        Parameter:
+            self    (Rectangle)
+
+        Returns:
+            area of the rectangle
+        """
         return self.__height * self.__width
 
     def display(self):
+        """
+        display a rectangle in stdout
+
+        Parameter:
+            self    (Rectangle)
+        """
         print("\n" * self.__y, end='')
         for column in range(self.__height):
             for row in range(self.__width - 1):
@@ -49,7 +66,7 @@ class Rectangle(Base):
         update arguments
 
         Parameters:
-            self    (obj)
+            self    (Rectangle)
             args    (Any)
             kwargs  (dict)
         """
@@ -67,6 +84,15 @@ class Rectangle(Base):
                 setattr(self, k, v)
 
     def __str__(self):
+        """
+        gives information about the Rectangle
+
+        Parameter:
+            self    (Rectangle)
+
+        Returns:
+            s:      informations
+        """
         s = "[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
                                                     self.x, self.y,
                                                     self.width, self.height)
