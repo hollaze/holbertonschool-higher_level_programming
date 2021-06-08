@@ -33,7 +33,7 @@ class Rectangle(Base):
 
     def validate_int(self, name: str, number):
         if type(number) is not int:
-            raise TypeError(f"{name} must be an integer")
+            raise TypeError("{} must be an integer".format(name))
 
     def area(self):
         return self.__height * self.__width
