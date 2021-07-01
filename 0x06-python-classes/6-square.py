@@ -3,7 +3,7 @@
 
 
 class Square:
-    """ 
+    """
     Class:
         defines a square
 
