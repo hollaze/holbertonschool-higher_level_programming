@@ -3,11 +3,14 @@
 
 
 class Square:
-    """ Class:
-            empty class that defines a square
+    """
+    Class:
+        defines a square
 
-        Instance:
-                size: size of the square
+    Attributes:
+    -----------
+    size : int
+        size of the square
     """
     def __init__(self, size=0):
         if not isinstance(size, int):

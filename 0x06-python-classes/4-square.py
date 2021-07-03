@@ -3,13 +3,19 @@
 
 
 class Square:
-    """ Class:
-            empty class that defines a square
-
-        Instance:
-                size: size of the square
     """
-    def __init__(self, value=0):
+    Class:
+        defines a square
+
+    Attributes:
+    -----------
+    size : int
+        size of the square
+    position : tuple
+        position of the square
+    """
+
+    def __init__(self, value=0, position=(0, 0)):
         self.__size = value
 
     def area(self):
