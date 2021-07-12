@@ -1,3 +1,3 @@
 -- List tables
 
-SHOW TABLES IN mysql;
+SHOW TABLES;
