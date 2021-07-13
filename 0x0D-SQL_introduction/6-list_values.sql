@@ -1,3 +1,3 @@
 -- List all in table
 
-SHOW INDEX FROM first_table;
+SELECT * FROM first_table;
