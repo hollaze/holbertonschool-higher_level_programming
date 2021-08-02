@@ -14,7 +14,7 @@ function bubbleSort (arr) {
   }
 }
 
-if (argv[2] === undefined || argv.length === 1) {
+if (argv.length < 4) {
   console.log(0);
 } else {
   for (let i = 2; argv[i]; i++) {
