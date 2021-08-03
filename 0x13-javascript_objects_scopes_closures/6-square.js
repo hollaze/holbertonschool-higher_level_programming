@@ -3,16 +3,15 @@
 const Rectangle = require('./5-square');
 
 module.exports = class Square extends Rectangle {
-  constructor(size) {
+  constructor (size) {
     super(size, size);
     this.size = size;
   }
 
-  charPrint(c) {
+  charPrint (c) {
     if (c === undefined) {
       this.print();
-    }
-    else {
+    } else {
       for (let i = 0; i < this.size; i++) {
         console.log(c.repeat(this.size));
       }
