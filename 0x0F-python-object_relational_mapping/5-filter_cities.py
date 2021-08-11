@@ -21,12 +21,13 @@ if __name__ == "__main__":
                    "ORDER BY cities.id ASC", [argv[4]])
 
     rows = cursor.fetchall()
-    try:
-        for row in range(len(rows)):
-            print(rows[row][0], ', ' if row < len(rows) - 1 else ' ', end='')
-        print()
-    except:
-        print()
+
+    list = []
+
+    for row in rows:
+        for column in row:
+            list.append(column)
+    print(", ".join(list))
 
     cursor.close()
     db.close()
