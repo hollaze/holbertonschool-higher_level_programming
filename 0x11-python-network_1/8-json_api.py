@@ -6,14 +6,12 @@ from sys import argv
 if __name__ == "__main__":
 
     if len(argv) <= 1:
-        value = ''
+        value = ""
     else:
         value = argv[1]
 
     datas = {'q': value}
-    response = post(
-        " http://ac5942ef3eb7.c0cd6e92.hbtn-cod.io:5000/search_user",
-        data=datas)
+    response = post("http://0.0.0.0:5000/search_user", data=datas)
 
     try:
         json = response.json()
