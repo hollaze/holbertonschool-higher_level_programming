@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """search api"""
-import json
 from requests import post
 from sys import argv
 
