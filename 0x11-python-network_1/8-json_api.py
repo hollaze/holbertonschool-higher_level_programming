@@ -11,13 +11,14 @@ if __name__ == "__main__":
         value = argv[1]
 
     datas = {'q': value}
-    json_response = post(
+    response = post(
         " http://ac5942ef3eb7.c0cd6e92.hbtn-cod.io:5000/search_user",
-        data=datas).json()
+        data=datas)
 
     try:
-        if json_response:
-            print("[{}] {}".format(json_response.get("id"), json_response.get("name")))
+        json = response.json()
+        if json:
+            print("[{}] {}".format(json.get("id"), json.get("name")))
         else:
             print("No result")
     except ValueError:
