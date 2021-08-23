@@ -12,7 +12,9 @@ if __name__ == "__main__":
         value = argv[1]
 
     datas = {'q': value}
-    json_response = post(" http://ac5942ef3eb7.c0cd6e92.hbtn-cod.io:5000/search_user", data=datas).json()
+    json_response = post(
+        " http://ac5942ef3eb7.c0cd6e92.hbtn-cod.io:5000/search_user",
+        data=datas).json()
 
     try:
         if json_response:
