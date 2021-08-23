@@ -16,7 +16,7 @@ if __name__ == "__main__":
         data=datas).json()
 
     try:
-        if json_response:
+        if 'id' in json:
             print("[{}] {}".format(json_response["id"], json_response["name"]))
         else:
             print("No result")
