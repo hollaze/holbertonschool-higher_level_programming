@@ -1,18 +1,20 @@
 #!/usr/bin/node
 const request = require('request');
 const url = process.argv[2]; // https://jsonplaceholder.typicode.com/todos
-const completedTasks = {};
 
 request(url, function (error, response, body) {
-  if (error) return (error);
+  if (error)  return (console.log(error));
   const parsedBody = JSON.parse(body);
 
+  const completedTasks = {};
+
   for (let i = 1; i < parsedBody.length; i++) {
-    if (parsedBody[i].completed === true) {
-      if (parsedBody[i].userId in completedTasks) {
-        completedTasks[parsedBody[i].userId] += 1;
+    if (parsedBody[i].completed) {
+        const userId = parsedBody[i].userId;
+      if (userId !== undefined) {
+        completedTasks[userId] += 1;
       } else {
-        completedTasks[parsedBody[i].userId] = 1;
+        completedTasks[userId] = 1;
       }
     }
   }
