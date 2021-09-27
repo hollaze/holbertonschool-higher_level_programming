@@ -10,11 +10,10 @@ request(url, function (error, response, body) {
 
   for (let i = 1; i < parsedBody.length; i++) {
     if (parsedBody[i].completed) {
-        const userId = parsedBody[i].userId;
-      if (userId !== undefined) {
-        completedTasks[userId] += 1;
+      if (parsedBody[i].userId !== undefined) {
+        completedTasks[parsedBody[i].userId] += 1;
       } else {
-        completedTasks[userId] = 1;
+        completedTasks[parsedBody[i].userId] = 1;
       }
     }
   }
