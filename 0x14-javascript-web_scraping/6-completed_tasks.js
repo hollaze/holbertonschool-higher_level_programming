@@ -4,7 +4,7 @@ const url = process.argv[2]; // https://jsonplaceholder.typicode.com/todos
 const completedTasks = {};
 
 request(url, function (error, response, body) {
-  if (error)  console.log(error);
+  if (error) console.log(error);
   const parsedBody = JSON.parse(body);
 
   for (let i = 1; i < parsedBody.length; i++) {
