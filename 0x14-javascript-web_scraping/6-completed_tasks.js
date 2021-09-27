@@ -3,7 +3,7 @@ const request = require('request');
 const url = process.argv[2]; // https://jsonplaceholder.typicode.com/todos
 
 request(url, function (error, response, body) {
-  if (error)  return (console.log(error));
+  if (error)  console.log(error);
   const parsedBody = JSON.parse(body);
 
   const completedTasks = {};
