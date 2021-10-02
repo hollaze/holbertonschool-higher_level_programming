@@ -5,6 +5,6 @@ import json
 
 def to_json_string(my_obj):
     '''
-    return JSON reprensentation of an object
+    from dict to string
     '''
     return json.dumps(my_obj)
