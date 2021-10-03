@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" add as many arguments into a list in json file """
+""" add as many arguments into a list in a json file """
 
 import sys
 load_from_json_file = __import__("6-load_from_json_file").load_from_json_file
